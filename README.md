@@ -9,7 +9,7 @@ Optimized bcrypt in JavaScript with zero dependencies. Compatible to the C++ bcr
 
 Parse Cookie header and populate req.cookies with an object keyed by the cookie names. Optionally you may enable signed cookie support by passing a secret string, which assigns req.secret so it may be used by other middleware.
 
-    $ npm install bcryptjs  
+    $ npm install cookie-parser
     
 Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. Storing configuration in the environment separate from code is based on The Twelve-Factor App methodology.
     
@@ -30,6 +30,14 @@ Mysql database connection package
 Nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
     
     npm install -g nodemon
+    
+## How does work?
+
+Installing after all the packages, you can run the project with 'npm run start'
+
+![pic2](https://github.com/dgokhan/NodeJS-LabelAdminPanel/blob/main/pic/npmrunstart.jpg)
+
+## Images
     
 ![pic0](https://github.com/dgokhan/NodeJS-LabelAdminPanel/blob/main/pic/homepage.jpg?raw=true)
 ![pic1](https://github.com/dgokhan/NodeJS-LabelAdminPanel/blob/main/pic/login.jpg?raw=true)
