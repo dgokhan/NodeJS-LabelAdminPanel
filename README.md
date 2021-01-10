@@ -33,7 +33,7 @@ Nodemon is a tool that helps develop node.js based applications by automatically
     
 ## How does work?
 
-Installing after all the packages, you can run the project with 'npm run start'
+It is recommended to run the nodemon with 'npm run start' to be active.
 
 ![pic2](https://github.com/dgokhan/NodeJS-LabelAdminPanel/blob/main/pic/npmrunstart.jpg)
 
