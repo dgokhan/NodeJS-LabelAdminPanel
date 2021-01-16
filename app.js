@@ -4,6 +4,8 @@ const app = express()
 const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 
+const Port = 8000
+
 // DotENV Confing
 dotenv.config({ path: './env'})
 
@@ -30,4 +32,4 @@ app.use('/auth', require('./routes/auth'));
 
 
 // Listen on port 8000
-app.listen(8000, () => console.info('Listening on port succesfully!'))
+app.listen(Port, () => console.info(`Listening on port ${Port} succesfully!`))

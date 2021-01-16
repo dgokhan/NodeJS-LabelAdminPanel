@@ -1,13 +1,14 @@
 const mysql = require('mysql')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs') 
+require('dotenv').config()
 
 // MySQL Connection
 const dB = mysql.createConnection({
-    host: 'localhost', 
-    user: 'root',
-    password: '',
-    database: 'instashare'
+    host: process.env.DB_HOSTNAME, 
+    user: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
 })
 
 dB.connect((error)=>{
@@ -75,20 +76,11 @@ exports.login = (req, res) =>{
             })
         }
         else{ 
-            const Id = results[0].Id;
-            const token = jwt.sign({Id}, "secretpasstruegram", {
-                expiresIn: '90d'
-            });
+            const dbUsername = results[0].Username; // Kullanıcın şifresini hashle!
 
-
-            const cookieOptions = {
-                expires: new Date(
-                    Date.now() + 90 * 24 * 60 * 60 * 1000
-                ),
-                httpOnly: true
-            } 
-            
-            res.cookie('jwt', token, cookieOptions);
+            const token = jwt.sign({dbUsername}, process.env.JWTSECRETKEY);
+ 
+            res.cookie('jwt', token, {maxAge: 20000, httpOnly:true});
             res.status(200).redirect("/");
         }
     });
