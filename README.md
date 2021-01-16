@@ -1,6 +1,8 @@
 # NodeJS-LabelAdminPanel
 Free 'Label' Admin Panel developed with Node JS & MYSQL.
 
+BLOG | https://www.gokhandogru.net/jwt-loginregister-panel-node-js-mysql/
+
 ## Installation
 
 Optimized bcrypt in JavaScript with zero dependencies. Compatible to the C++ bcrypt binding on node.js and also working in the browser.
